@@ -59,5 +59,4 @@ License
 This project is licensed under the MIT License – feel free to use, modify, and distribute it as needed.
 
 Author
-Created by [Assaf Ben Horin].
-Feel free to reach out if you have any questions or suggestions!
+Created by Assaf Ben Horin
