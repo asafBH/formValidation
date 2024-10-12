@@ -59,7 +59,5 @@ License
 This project is licensed under the MIT License – feel free to use, modify, and distribute it as needed.
 
 Author
-Created by [Your Name].
+Created by [Assaf Ben Horin].
 Feel free to reach out if you have any questions or suggestions!
-
-There you go! Now you can copy this text easily into your README.md file. Let me know if you need any further adjustments.
