@@ -1,38 +1,31 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-  <title>Form Validation</title>
-
+  <meta charset="UTF-8">
   <meta content="noindex, nofollow" name="robots">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
   <link href="form.css" rel="stylesheet" type="text/css">
-  <script src="formValid.js"></script>
+  <script src="formValid.js" defer></script>
 </head>
-
 <body class="body">
-
   <h1 id="h1">Registration Form</h1>
   <hr width="25%">
   <br>
-  <form name="myform" onsubmit="return validateForm()" action="form.html">
+  <form name="myform" onsubmit="return validateForm()" action="#">
     <div class="form-style-6">
-
-      <!-- This segment displays the validation rule for user name -->
-      <label>Name</label>
-      <input type="text" id="name" name="=Name" placeholder="Your Name..">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name..">
       <span id="nameError"></span>
       <br><br>
 
-      <!-- This segment displays the validation rule for user address -->
-      <label>Address</label>
-      <input type="text" id="address" name="Address" placeholder="Your Address..">
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" placeholder="Your Address..">
       <span id="addressError"></span>
       <br><br>
 
-      <input id="submit" type='submit' value='Send'>
+      <input id="submit" type="submit" value="Send">
     </div>
   </form>
 </body>
-
 </html>

@@ -1,28 +1,28 @@
-// Make quick references to our fields.
 function validateForm() {
-  var flag = true;
-  var onlyletters= /^[a-zA-Z]+$/;
-  var Name = document.forms["myform"]["name"].value;
-  var Address = document.forms["myform"]["address"].value;
+  let flag = true;
+  const onlyLetters = /^[a-zA-Z]+$/;
+  const name = document.forms["myform"]["name"].value.trim();
+  const address = document.forms["myform"]["address"].value.trim();
 
-  //check if name of user is less then five letters and not empty
-  var min_chars_name = 5;
-  if (Name.length < min_chars_name) {
-    document.getElementById("nameError").innerHTML = "Name must be more then 5 letters and not empty";
+  const nameError = document.getElementById("nameError");
+  const addressError = document.getElementById("addressError");
+
+  // Clear previous error messages
+  nameError.innerHTML = "";
+  addressError.innerHTML = "";
+
+  // Validate Name
+  if (name.length < 5) {
+    nameError.innerHTML = "Name must be at least 5 letters and not empty.";
+    flag = false;
+  } else if (!onlyLetters.test(name)) {
+    nameError.innerHTML = "Use only letters.";
     flag = false;
   }
-  //check if not only letters insert to name
-  else if (!onlyletters.test(Name)) {
-    flag=false;
-    document.getElementById("nameError").innerHTML="Use only letters";
-  }
 
-  var max_chars_address = 10;
-  var min_chars_address = 1;
-  
-  //check if address is more then ten letters and not empty
-  if (Address.length > max_chars_address || Address.length < min_chars_address) {
-    document.getElementById("addressError").innerHTML = "adress must be less then 10 letters and not empty";
+  // Validate Address
+  if (address.length < 5 || address.length > 50) {
+    addressError.innerHTML = "Address must be between 5 and 50 characters.";
     flag = false;
   }
 
